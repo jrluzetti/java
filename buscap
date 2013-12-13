@@ -1,0 +1,47 @@
+public class buscap {
+	
+  public static void main (String[] args){
+     int resultado;
+     int a=0;
+     int[] gprimo;
+     primo valor = new primo();
+     for (int y=2;y<100;y++){
+        resultado=valor.vprimo(y);
+     	if (resultado==0){
+			//System.out.println("O numero "+y+" nao e primo.");
+
+     	} else{
+			System.out.println(+a+" - O numero "+y+" e primo.");
+			a++;
+
+     	}
+     }
+     
+     System.out.println(""+a);
+  }
+
+}
+
+class primo{
+
+  public int vprimo(int x){
+	 int a=2;
+     int b=x;
+     int retorno=2;
+     
+     while (a<b){
+        if ((b%a)==0){
+        	//System.out.println("O numero "+b+" nao e primo.");
+            a=b;
+            retorno=0;
+        }
+     	a++;
+     }
+     if (a==b){
+     	//System.out.println("O numero "+b+" e primo.");
+        retorno=1;
+     }
+     
+     return retorno;
+  }
+}
